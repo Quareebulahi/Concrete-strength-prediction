@@ -2,11 +2,11 @@ import streamlit as st
 import joblib
 import pandas as pd
 import numpy as np
-import pickle
-#pipeline = joblib.load('concrete_pipeline.joblib')
 
-with open('my_pipeline.pkl', 'rb') as file:
-    pipeline = pickle.load(file)
+pipeline = joblib.load('concrete_pipeline.joblib')
+
+# with open('my_pipeline.pkl', 'rb') as file:
+#     pipeline = pickle.load(file)
 
 
 def collect_user_input():
