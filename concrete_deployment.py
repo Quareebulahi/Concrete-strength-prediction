@@ -2,7 +2,12 @@ import streamlit as st
 import joblib
 import pandas as pd
 import numpy as np
-pipeline = joblib.load('concrete_pipeline.joblib')
+import pickle
+#pipeline = joblib.load('concrete_pipeline.joblib')
+
+with open('my_pipeline.pkl', 'rb') as file:
+    pipeline = pickle.load(file)
+
 
 def collect_user_input():
     st.title('Concrete Strength Prediction App')
